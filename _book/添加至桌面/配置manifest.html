@@ -1,0 +1,741 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>4.1. 配置manifest.json · PWA学习总结</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="引入manifest.html" />
+    
+    
+    <link rel="prev" href="../添加至桌面.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    1. Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../PWA是什么.html">
+            
+                <a href="../PWA是什么.html">
+            
+                    
+                    2. PWA是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../PWA的技术.html">
+            
+                <a href="../PWA的技术.html">
+            
+                    
+                    3. PWA的技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../添加至桌面.html">
+            
+                <a href="../添加至桌面.html">
+            
+                    
+                    4. 添加至桌面
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="配置manifest.html">
+            
+                <a href="配置manifest.html">
+            
+                    
+                    4.1. 配置manifest.json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="引入manifest.html">
+            
+                <a href="引入manifest.html">
+            
+                    
+                    4.2. 引入manifest.json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="兼容性.html">
+            
+                <a href="兼容性.html">
+            
+                    
+                    4.3. 兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../离线缓存.html">
+            
+                <a href="../离线缓存.html">
+            
+                    
+                    5. 离线缓存
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../离线缓存/Service Worker介绍.html">
+            
+                <a href="../离线缓存/Service Worker介绍.html">
+            
+                    
+                    5.1. Service Worker介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../离线缓存/Cache API介绍.html">
+            
+                <a href="../离线缓存/Cache API介绍.html">
+            
+                    
+                    5.2. Cache API介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../离线缓存/离线缓存实践.html">
+            
+                <a href="../离线缓存/离线缓存实践.html">
+            
+                    
+                    5.3. 离线缓存实践
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../离线缓存/离线缓存实践/注册Service worker.html">
+            
+                <a href="../离线缓存/离线缓存实践/注册Service worker.html">
+            
+                    
+                    5.3.1. 注册Service worker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../离线缓存/离线缓存实践/缓存静态资源.html">
+            
+                <a href="../离线缓存/离线缓存实践/缓存静态资源.html">
+            
+                    
+                    5.3.2. 缓存静态资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../离线缓存/离线缓存实践/缓存API请求.html">
+            
+                <a href="../离线缓存/离线缓存实践/缓存API请求.html">
+            
+                    
+                    5.3.3. 缓存API请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../离线缓存/离线缓存实践/更新缓存.html">
+            
+                <a href="../离线缓存/离线缓存实践/更新缓存.html">
+            
+                    
+                    5.3.4. 更新缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../离线缓存/兼容性.html">
+            
+                <a href="../离线缓存/兼容性.html">
+            
+                    
+                    5.4. 兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../消息推送和提醒.html">
+            
+                <a href="../消息推送和提醒.html">
+            
+                    
+                    6. 消息推送和提醒
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../消息推送和提醒/Push.html">
+            
+                <a href="../消息推送和提醒/Push.html">
+            
+                    
+                    6.1. Push
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../消息推送和提醒/Push/推送消息的三个流程.html">
+            
+                <a href="../消息推送和提醒/Push/推送消息的三个流程.html">
+            
+                    
+                    6.1.1 推送消息的三个流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../消息推送和提醒/Push/客户端订阅消息推送.html">
+            
+                <a href="../消息推送和提醒/Push/客户端订阅消息推送.html">
+            
+                    
+                    6.1.2 客户端订阅消息推送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../消息推送和提醒/Push/服务器端推送消息给浏览器.html">
+            
+                <a href="../消息推送和提醒/Push/服务器端推送消息给浏览器.html">
+            
+                    
+                    6.1.3 服务器端推送消息给浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../消息推送和提醒/Push/Service Worker接收消息.html">
+            
+                <a href="../消息推送和提醒/Push/Service Worker接收消息.html">
+            
+                    
+                    6.1.4 Service Worker接收消息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../消息推送和提醒/Notification.html">
+            
+                <a href="../消息推送和提醒/Notification.html">
+            
+                    
+                    6.2. Notification
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../消息推送和提醒/Notification/提醒界面.html">
+            
+                <a href="../消息推送和提醒/Notification/提醒界面.html">
+            
+                    
+                    6.2.1 提醒界面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../消息推送和提醒/Notification/提醒交互.html">
+            
+                <a href="../消息推送和提醒/Notification/提醒交互.html">
+            
+                    
+                    6.2.2 提醒交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../消息推送和提醒/兼容性.html">
+            
+                <a href="../消息推送和提醒/兼容性.html">
+            
+                    
+                    6.3. 兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../后台数据同步.html">
+            
+                <a href="../后台数据同步.html">
+            
+                    
+                    7. 后台数据同步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../后台数据同步/后台同步介绍.html">
+            
+                <a href="../后台数据同步/后台同步介绍.html">
+            
+                    
+                    7.1. 后台数据同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../后台数据同步/实现后台同步.html">
+            
+                <a href="../后台数据同步/实现后台同步.html">
+            
+                    
+                    7.2. 实现后台同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../后台数据同步/提交数据到后台同步.html">
+            
+                <a href="../后台数据同步/提交数据到后台同步.html">
+            
+                    
+                    7.3. 提交数据到后台同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../后台数据同步/兼容性.html">
+            
+                <a href="../后台数据同步/兼容性.html">
+            
+                    
+                    7.4. 兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../总结.html">
+            
+                <a href="../总结.html">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4.1. 配置manifest.json</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="41-&#x914D;&#x7F6E;manifestjson">4.1. &#x914D;&#x7F6E;manifest.json</h1><p>&#x4EE5;&#x4E0B;&#x4E3A;manifest.json&#x4F8B;&#x5B50;&#xFF1A;</p><pre><code class="lang-json">{
+    <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;&#x65B0;&#x95FB;&#x641C;&#x7D22;&quot;</span>,
+    <span class="hljs-string">&quot;short_name&quot;</span> : <span class="hljs-string">&quot;news&quot;</span>,
+    <span class="hljs-string">&quot;start_url&quot;</span> : <span class="hljs-string">&quot;/&quot;</span>,
+    <span class="hljs-string">&quot;display&quot;</span> : <span class="hljs-string">&quot;standalone&quot;</span>,       
+    <span class="hljs-string">&quot;background_color&quot;</span> : <span class="hljs-string">&quot;#02cfd4&quot;</span>,
+    <span class="hljs-string">&quot;description&quot;</span> : <span class="hljs-string">&quot;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x65B0;&#x95FB;&#x641C;&#x7D22;&#x7684;&#x5C0F;&#x5E94;&#x7528;&quot;</span>,
+    <span class="hljs-string">&quot;theme_color&quot;</span> : <span class="hljs-string">&quot;#02cfd4&quot;</span>,
+    <span class="hljs-string">&quot;orientation&quot;</span> : <span class="hljs-string">&quot;portrait-primary&quot;</span>,
+    <span class="hljs-string">&quot;icons&quot;</span> : [
+        {
+            <span class="hljs-string">&quot;src&quot;</span> : <span class="hljs-string">&quot;img/icon_32.png&quot;</span>,
+            <span class="hljs-string">&quot;sizes&quot;</span> : <span class="hljs-string">&quot;32x32&quot;</span>,
+            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;image/png&quot;</span>
+        },{
+            <span class="hljs-string">&quot;src&quot;</span> : <span class="hljs-string">&quot;img/icon_72.png&quot;</span>,
+            <span class="hljs-string">&quot;sizes&quot;</span> : <span class="hljs-string">&quot;72x72&quot;</span>,
+            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;image/png&quot;</span>
+        },{
+            <span class="hljs-string">&quot;src&quot;</span> : <span class="hljs-string">&quot;img/icon_128.png&quot;</span>,
+            <span class="hljs-string">&quot;sizes&quot;</span> : <span class="hljs-string">&quot;128x128&quot;</span>,
+            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;image/png&quot;</span>
+        },{
+            <span class="hljs-string">&quot;src&quot;</span> : <span class="hljs-string">&quot;img/icon_144.png&quot;</span>,
+            <span class="hljs-string">&quot;sizes&quot;</span> : <span class="hljs-string">&quot;144x144&quot;</span>,
+            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;image/png&quot;</span>
+        },{
+            <span class="hljs-string">&quot;src&quot;</span> : <span class="hljs-string">&quot;img/icon_192.png&quot;</span>,
+            <span class="hljs-string">&quot;sizes&quot;</span> : <span class="hljs-string">&quot;192x192&quot;</span>,
+            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;image/png&quot;</span>
+        },{
+            <span class="hljs-string">&quot;src&quot;</span> : <span class="hljs-string">&quot;img/icon_256.png&quot;</span>,
+            <span class="hljs-string">&quot;sizes&quot;</span> : <span class="hljs-string">&quot;256x256&quot;</span>,
+            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;image/png&quot;</span>
+        },{
+            <span class="hljs-string">&quot;src&quot;</span> : <span class="hljs-string">&quot;img/icon_512.png&quot;</span>,
+            <span class="hljs-string">&quot;sizes&quot;</span> : <span class="hljs-string">&quot;512x512&quot;</span>,
+            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-string">&quot;image/png&quot;</span>
+        }
+    ] 
+}</code></pre>
+<p>&#x914D;&#x7F6E;&#x89E3;&#x91CA;&#xFF1A;</p><p><code>name</code> : &#x6253;&#x5F00;&#x684C;&#x9762;web&#x5E94;&#x7528;&#x65F6;&#xFF0C;&#x542F;&#x52A8;&#x9875;&#x7684;&#x6807;&#x9898;<br>
+<code>short_name</code> : &#x6DFB;&#x52A0;&#x81F3;&#x684C;&#x9762;&#x5E94;&#x7528;&#x7684;&#x540D;&#x79F0;<br>
+<code>start_url</code> : &#x684C;&#x9762;&#x5E94;&#x7528;&#x6253;&#x5F00;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x5982;&#x8BBE;&#x7F6E;&#x4E3A;&apos;/&apos;&#xFF0C;&#x4E3A;manifest.json&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x7684;index.html<br>
+<code>display</code> : &#x684C;&#x9762;&#x5E94;&#x7528;&#x6253;&#x5F00;&#x540E;&#x5C55;&#x793A;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x6709;&#x56DB;&#x79CD;&#x6A21;&#x5F0F;&#xFF1A;fullscreen&#x3001;standalone&#x3001;minimal-ui&#x3001;browser<br>
+    -<code>fullscreen</code>&#x6A21;&#x5F0F; : &#x9875;&#x9762;&#x5360;&#x6EE1;&#x6574;&#x4E2A;&#x5C4F;&#x5E55;<br>
+    -<code>standalone</code>&#x6A21;&#x5F0F; : &#x6B64;&#x6A21;&#x5F0F;&#x6BD4;&#x8F83;&#x76F8;&#x4F3C;&#x5728;app&#x6253;&#x5F00;&#xFF0C;&#x4E0E;&#x5168;&#x5C4F;&#x6A21;&#x5F0F;&#x76F8;&#x6BD4;&#xFF0C;&#x5C55;&#x793A;&#x624B;&#x673A;&#x5C4F;&#x5E55;&#x9876;&#x90E8;&#x4FE1;&#x606F;&#x65F6;&#x95F4;&#x3001;&#x7535;&#x91CF;&#x7B49;&#x4FE1;&#x606F;&#x680F;&#x3002;<br>
+    -<code>minimal-ui</code>&#x6A21;&#x5F0F; : &#x4E0E;standalone&#x6A21;&#x5F0F;&#x76F8;&#x6BD4;&#xFF0C;&#x591A;&#x51FA;&#x6D4F;&#x89C8;&#x5668;&#x5730;&#x5740;&#x680F;<br>
+    -<code>browser</code>&#x6A21;&#x5F0F; : &#x6D4F;&#x89C8;&#x5668;&#x6A21;&#x5F0F;&#xFF0C;&#x4E0E;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00;&#x4E00;&#x81F4;</p><p><img src="../images/display.jpg"></p><p>&#x5176;&#x4E2D;&#xFF0C;&#x90E8;&#x5206;Android&#x624B;&#x673A;Chrome&#x6D4F;&#x89C8;&#x5668;&#x80FD;&#x591F;&#x517C;&#x5BB9;&#x56DB;&#x79CD;&#x6A21;&#x5F0F;&#xFF0C;&#x90E8;&#x5206;Android&#x624B;&#x673A;Chrome&#x6D4F;&#x89C8;&#x5668;&#x76EE;&#x524D;&#x53EA;&#x517C;&#x5BB9;standalone&#x548C;browser&#x6A21;&#x5F0F;&#xFF0C;fullscreen&#x548C;minimal-ui&#x5219;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#x4E3A;standalone&#x548C;browser&#x6A21;&#x5F0F;&#x3002;</p><p><code>background_color</code> : &#x542F;&#x52A8;&#x9875;&#x80CC;&#x666F;&#x989C;&#x8272;<br>
+<code>description</code> : web&#x5E94;&#x7528;&#x63CF;&#x8FF0;<br>
+<code>theme_color</code> : &#x6253;&#x5F00;&#x684C;&#x9762;&#x5E94;&#x7528;&#xFF0C;&#x5730;&#x5740;&#x680F;&#x3001;&#x4FE1;&#x606F;&#x680F;&#x4E3B;&#x9898;&#x989C;&#x8272;,&#x53EF;&#x770B;&#x4E0A;&#x56FE;&#x7684;standalone&#x548C;minimal-ui&#x6A21;&#x5F0F;<br>
+<code>orientation</code> : &#x6307;&#x5B9A;&#x9875;&#x9762;&#x7684;&#x5C55;&#x793A;&#x65B9;&#x5411;&#xFF0C;&#x4F1A;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x8BBE;&#x5907;&#x6A2A;&#x7AD6;&#x5C4F;&#x7684;&#x89D2;&#x5EA6;&#x53BB;&#x5B9A;&#x4E49;&#x3002;<br>
+    -<code>portrait</code>&#xFF5C;<code>portrait-primary</code>&#xFF5C;<code>portrait-secondary</code> : &#x7AD6;&#x5C4F;<br>
+    -<code>portrait</code>&#xFF5C;<code>portrait-primary</code>&#xFF5C;<code>portrait-seconday</code> : &#x6A2A;&#x5C4F;<br>
+    -<code>natural</code> :  &#x8BBE;&#x5907;&#x5C4F;&#x5E55;&#x65CB;&#x8F6C;&#x89D2;&#x5EA6;&#x4E3A;0&#xB0; &#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x5411;<br>
+    -<code>any</code> : &#x53EF;&#x6839;&#x636E;&#x8BBE;&#x5907;&#x5C4F;&#x5E55;&#x89D2;&#x5EA6;&#x65CB;&#x8F6C;&#x9875;&#x9762;<br>
+<code>icons</code> : &#x684C;&#x9762;&#x5E94;&#x7528;icon&#x56FE;&#x3001;&#x5F00;&#x542F;&#x9875;&#x5C55;&#x793A;&#x56FE;&#xFF0C;&#x6570;&#x7EC4;&#x683C;&#x5F0F;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x9009;&#x62E9;&#x9002;&#x5408;&#x7684;&#x5C3A;&#x5BF8;&#x4F5C;&#x4E3A;icon&#x56FE;<br>
+    -<code>src</code> : icon&#x5730;&#x5740;<br>
+    -<code>sizes</code> : icon&#x5C3A;&#x5BF8;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;px&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;&#x5BBD;x&#x9AD8;<br>
+    -<code>type</code> : icon&#x683C;&#x5F0F;&#xFF0C;&#x5982;png&#x4E3A;image/png&#x3001;jpg&#x4E3A;image/jpg&#x3001;jpeg&#x4E3A;image/jpeg</p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../添加至桌面.html" class="navigation navigation-prev " aria-label="Previous page: 4. 添加至桌面">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="引入manifest.html" class="navigation navigation-next " aria-label="Next page: 4.2. 引入manifest.json">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4.1. 配置manifest.json","level":"1.4.1","depth":2,"next":{"title":"4.2. 引入manifest.json","level":"1.4.2","depth":2,"path":"添加至桌面/引入manifest.md","ref":"添加至桌面/引入manifest.md","articles":[]},"previous":{"title":"4. 添加至桌面","level":"1.4","depth":1,"path":"添加至桌面.md","ref":"添加至桌面.md","articles":[{"title":"4.1. 配置manifest.json","level":"1.4.1","depth":2,"path":"添加至桌面/配置manifest.md","ref":"添加至桌面/配置manifest.md","articles":[]},{"title":"4.2. 引入manifest.json","level":"1.4.2","depth":2,"path":"添加至桌面/引入manifest.md","ref":"添加至桌面/引入manifest.md","articles":[]},{"title":"4.3. 兼容性","level":"1.4.3","depth":2,"path":"添加至桌面/兼容性.md","ref":"添加至桌面/兼容性.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["toggle-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"PWA学习总结","gitbook":"*","description":"介绍PWA的各个功能的实现"},"file":{"path":"添加至桌面/配置manifest.md","mtime":"2018-09-19T09:17:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-09-19T09:27:29.780Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

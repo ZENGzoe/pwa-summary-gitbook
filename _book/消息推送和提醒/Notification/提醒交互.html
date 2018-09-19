@@ -1,0 +1,750 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>6.2.2 提醒交互 · PWA学习总结</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../兼容性.html" />
+    
+    
+    <link rel="prev" href="提醒界面.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    1. Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../PWA是什么.html">
+            
+                <a href="../../PWA是什么.html">
+            
+                    
+                    2. PWA是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../PWA的技术.html">
+            
+                <a href="../../PWA的技术.html">
+            
+                    
+                    3. PWA的技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../添加至桌面.html">
+            
+                <a href="../../添加至桌面.html">
+            
+                    
+                    4. 添加至桌面
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../添加至桌面/配置manifest.html">
+            
+                <a href="../../添加至桌面/配置manifest.html">
+            
+                    
+                    4.1. 配置manifest.json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../添加至桌面/引入manifest.html">
+            
+                <a href="../../添加至桌面/引入manifest.html">
+            
+                    
+                    4.2. 引入manifest.json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../添加至桌面/兼容性.html">
+            
+                <a href="../../添加至桌面/兼容性.html">
+            
+                    
+                    4.3. 兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../离线缓存.html">
+            
+                <a href="../../离线缓存.html">
+            
+                    
+                    5. 离线缓存
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../离线缓存/Service Worker介绍.html">
+            
+                <a href="../../离线缓存/Service Worker介绍.html">
+            
+                    
+                    5.1. Service Worker介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../离线缓存/Cache API介绍.html">
+            
+                <a href="../../离线缓存/Cache API介绍.html">
+            
+                    
+                    5.2. Cache API介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../离线缓存/离线缓存实践.html">
+            
+                <a href="../../离线缓存/离线缓存实践.html">
+            
+                    
+                    5.3. 离线缓存实践
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../离线缓存/离线缓存实践/注册Service worker.html">
+            
+                <a href="../../离线缓存/离线缓存实践/注册Service worker.html">
+            
+                    
+                    5.3.1. 注册Service worker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../离线缓存/离线缓存实践/缓存静态资源.html">
+            
+                <a href="../../离线缓存/离线缓存实践/缓存静态资源.html">
+            
+                    
+                    5.3.2. 缓存静态资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../../离线缓存/离线缓存实践/缓存API请求.html">
+            
+                <a href="../../离线缓存/离线缓存实践/缓存API请求.html">
+            
+                    
+                    5.3.3. 缓存API请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../../离线缓存/离线缓存实践/更新缓存.html">
+            
+                <a href="../../离线缓存/离线缓存实践/更新缓存.html">
+            
+                    
+                    5.3.4. 更新缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../离线缓存/兼容性.html">
+            
+                <a href="../../离线缓存/兼容性.html">
+            
+                    
+                    5.4. 兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../消息推送和提醒.html">
+            
+                <a href="../../消息推送和提醒.html">
+            
+                    
+                    6. 消息推送和提醒
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Push.html">
+            
+                <a href="../Push.html">
+            
+                    
+                    6.1. Push
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../Push/推送消息的三个流程.html">
+            
+                <a href="../Push/推送消息的三个流程.html">
+            
+                    
+                    6.1.1 推送消息的三个流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../Push/客户端订阅消息推送.html">
+            
+                <a href="../Push/客户端订阅消息推送.html">
+            
+                    
+                    6.1.2 客户端订阅消息推送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../Push/服务器端推送消息给浏览器.html">
+            
+                <a href="../Push/服务器端推送消息给浏览器.html">
+            
+                    
+                    6.1.3 服务器端推送消息给浏览器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../Push/Service Worker接收消息.html">
+            
+                <a href="../Push/Service Worker接收消息.html">
+            
+                    
+                    6.1.4 Service Worker接收消息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Notification.html">
+            
+                <a href="../Notification.html">
+            
+                    
+                    6.2. Notification
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="提醒界面.html">
+            
+                <a href="提醒界面.html">
+            
+                    
+                    6.2.1 提醒界面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.2.2" data-path="提醒交互.html">
+            
+                <a href="提醒交互.html">
+            
+                    
+                    6.2.2 提醒交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../兼容性.html">
+            
+                <a href="../兼容性.html">
+            
+                    
+                    6.3. 兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../后台数据同步.html">
+            
+                <a href="../../后台数据同步.html">
+            
+                    
+                    7. 后台数据同步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../后台数据同步/后台同步介绍.html">
+            
+                <a href="../../后台数据同步/后台同步介绍.html">
+            
+                    
+                    7.1. 后台数据同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../后台数据同步/实现后台同步.html">
+            
+                <a href="../../后台数据同步/实现后台同步.html">
+            
+                    
+                    7.2. 实现后台同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../后台数据同步/提交数据到后台同步.html">
+            
+                <a href="../../后台数据同步/提交数据到后台同步.html">
+            
+                    
+                    7.3. 提交数据到后台同步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../后台数据同步/兼容性.html">
+            
+                <a href="../../后台数据同步/兼容性.html">
+            
+                    
+                    7.4. 兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../总结.html">
+            
+                <a href="../../总结.html">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >6.2.2 提醒交互</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="622-&#x63D0;&#x9192;&#x4EA4;&#x4E92;">6.2.2 &#x63D0;&#x9192;&#x4EA4;&#x4E92;</h1><p>&#x63D0;&#x9192;&#x754C;&#x9762;&#x5DF2;&#x7ECF;&#x51FA;&#x6765;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x600E;&#x4E48;&#x53BB;&#x6355;&#x83B7;&#x7528;&#x6237;&#x5728;&#x63D0;&#x9192;&#x754C;&#x9762;&#x4E0A;&#x7684;&#x64CD;&#x4F5C;&#x5462;&#x3002;</p><p>&#x5728;Service Worker&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>notificationclick</code>&#x53BB;&#x6355;&#x83B7;&#x7528;&#x6237;&#x7684;&#x70B9;&#x51FB;&#x3002;</p><pre><code>//serviceworker.js
+self.addEventListener(&apos;notificationclick&apos; , function(e){
+    var action = e.action;
+    console.log(`action tag:${e.notification.tag}`,`action:${action}`,e);
+    switch(action){
+        case &apos;show-jd&apos; : 
+            console.log(&apos;show-jd&apos;);
+            break;
+        case &apos;contact-me&apos; :
+            console.log(&apos;contact-me&apos;);
+            break;
+        default :
+            console.log(`&#x672A;&#x5904;&#x7406;&#x7684;action&#xFF1A;${e.action}`);
+            action = &apos;default&apos;;
+            break;
+    }
+    e.notification.close(); //&#x5173;&#x95ED;&#x901A;&#x77E5;&#x680F;
+})</code></pre>
+<p>&#x5728;<code>notificationclick</code>&#x4E8B;&#x4EF6;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>e.notification.close()</code>&#x5173;&#x95ED;&#x901A;&#x77E5;&#x680F;&#x3002;&#x8FD8;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;<code>action</code>&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x6839;&#x636E;<code>action</code>&#x8FDB;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x5728;&#x4E0A;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x52A0;&#x4E86;<code>show-jd</code>&#x548C;<code>contact-me</code>&#x7684;<code>action</code>&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x4E9B;<code>action</code>&#x6DFB;&#x52A0;&#x4E0D;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982;&#x70B9;&#x51FB;&#x201C;&#x53BB;&#x4EAC;&#x4E1C;&#x201D;&#xFF0C;&#x5219;&#x65B0;&#x589E;&#x6807;&#x7B7E;&#x9875;&#x8DF3;&#x53BB;&#x4EAC;&#x4E1C;&#x9996;&#x9875;&#xFF0C;&#x70B9;&#x51FB;&#x201C;&#x8054;&#x7CFB;&#x6211;&#x201D;&#xFF0C;&#x5219;&#x5524;&#x8D77;&#x53D1;&#x7ED9;&#x6211;&#x7684;&#x90AE;&#x4EF6;&#x3002;</p><p>&#x4F46;&#x662F;Service Worker&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x64CD;&#x4F5C;DOM&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BA9;Service Worker&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x901A;&#x4FE1;&#x3002;&#x5728;Service Worker&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>postMessage</code>&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x6D88;&#x606F;&#xFF0C;&#x800C;&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x7528;<code>message</code>&#x4E8B;&#x4EF6;&#x6355;&#x83B7;Service Worker&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x3002;</p><pre><code class="lang-javascript"><span class="hljs-comment">//serviceworker.js</span>
+
+self.addEventListener(<span class="hljs-string">&apos;notificationclick&apos;</span> , <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+    <span class="hljs-keyword">var</span> action = e.action;
+    ...
+    e.waitUntil(
+        self.clients.matchAll().then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">clients</span>)</span>{
+            clients.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">client</span>)</span>{
+                client.postMessage(action);    <span class="hljs-comment">//&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x7684;`action`&#x3002;</span>
+            })
+        })
+    )
+
+    e.notification.close();
+})</code></pre>
+<p>&#x4F7F;&#x7528;<code>e.waitUntil</code>&#x53EF;&#x4EE5;&#x5728;&#x7A0B;&#x5E8F;&#x7E41;&#x5FD9;&#x540E;&#x4E5F;&#x80FD;&#x4FDD;&#x8BC1;&#x5C06;&#x4FE1;&#x606F;&#x53D1;&#x9001;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#x3002;</p><p>&#x6355;&#x83B7;<code>service worker</code>&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#xFF1A;</p><pre><code class="lang-javascript"><span class="hljs-comment">//index.js</span>
+navigator.serviceWorker.addEventListener(<span class="hljs-string">&apos;message&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+    <span class="hljs-keyword">var</span> action = e.data;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`&#x7528;&#x6237;&#x70B9;&#x51FB;&#x7684;action&#x662F;&#xFF1A;<span class="hljs-subst">${e.data}</span>`</span>);
+    <span class="hljs-keyword">switch</span>(action){
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;show-jd&apos;</span> :
+            location.href = <span class="hljs-string">&apos;https://www.jd.com&apos;</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> <span class="hljs-string">&apos;contact-me&apos;</span> :
+            location.href = <span class="hljs-string">&apos;mailto:563282341@qq.com&apos;</span>;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">default</span> :   <span class="hljs-comment">//&#x70B9;&#x51FB;&#x9664;show-jd&#x548C;contact-me&#x533A;&#x57DF;&#xFF0C;&#x663E;&#x793A;&#x9875;&#x9762;&#x63D0;&#x793A;</span>
+            <span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&apos;.tips&apos;</span>).style.display = <span class="hljs-string">&apos;block&apos;</span>;
+            <span class="hljs-keyword">break</span>;
+    }
+})</code></pre>
+<p>&#x8FD8;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x901A;&#x77E5;&#x680F;&#x65F6;&#x5207;&#x6362;&#x5230;&#x5F53;&#x524D;&#x5BA2;&#x6237;&#x7AEF;&#x6807;&#x7B7E;&#x9875;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x672A;&#x6253;&#x5F00;&#x5BA2;&#x6237;&#x7AEF;&#x65F6;&#xFF0C;&#x6253;&#x5F00;&#x5BA2;&#x6237;&#x7AEF;&#x6807;&#x7B7E;&#x9875;&#xFF1A;</p><pre><code class="lang-javascript">self.addEventListener(<span class="hljs-string">&apos;notificationclick&apos;</span> , <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>)</span>{
+    <span class="hljs-keyword">var</span> action = e.action;
+    ...
+
+    e.waitUntil(
+        self.clients.matchAll().then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">clients</span>)</span>{
+            <span class="hljs-keyword">if</span>(!clients || clients.length == <span class="hljs-number">0</span>){
+                <span class="hljs-comment">//&#x6253;&#x5F00;&#x6807;&#x7B7E;&#x9875;</span>
+                self.clients.openWindow &amp;&amp; self.clients.openWindow(<span class="hljs-string">&apos;http://127.0.0.1:3034&apos;</span>);
+                <span class="hljs-keyword">return</span>;
+            }
+            <span class="hljs-comment">//&#x5207;&#x6362;&#x5230;&#x6307;&#x5B9A;&#x5BA2;&#x6237;&#x7AEF;&#x9875;</span>
+            clients[<span class="hljs-number">0</span>].focus &amp;&amp; clients[<span class="hljs-number">0</span>].focus();
+            ...
+        })
+    )
+
+    e.notification.close();
+})</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="提醒界面.html" class="navigation navigation-prev " aria-label="Previous page: 6.2.1 提醒界面">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../兼容性.html" class="navigation navigation-next " aria-label="Next page: 6.3. 兼容性">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.2.2 提醒交互","level":"1.6.2.2","depth":3,"next":{"title":"6.3. 兼容性","level":"1.6.3","depth":2,"path":"消息推送和提醒/兼容性.md","ref":"消息推送和提醒/兼容性.md","articles":[]},"previous":{"title":"6.2.1 提醒界面","level":"1.6.2.1","depth":3,"path":"消息推送和提醒/Notification/提醒界面.md","ref":"消息推送和提醒/Notification/提醒界面.md","articles":[]},"dir":"ltr"},"config":{"plugins":["toggle-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"PWA学习总结","gitbook":"*","description":"介绍PWA的各个功能的实现"},"file":{"path":"消息推送和提醒/Notification/提醒交互.md","mtime":"2018-09-19T09:12:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2018-09-19T09:27:29.780Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
