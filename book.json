@@ -1,7 +1,0 @@
-{
-    "title" : "PWA学习总结",
-    "description" : "介绍PWA的各个功能的实现",
-    "plugins" : [
-        "toggle-chapters"
-    ]
-}
